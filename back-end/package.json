@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node app"
   },
-	"author": "leon",
+  "author": "leon",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -13,6 +13,7 @@
     "express": "^4.15.2",
     "express-session": "^1.15.2",
     "moment": "^2.18.1",
-    "mysql": "^2.13.0"
+    "mysql": "^2.13.0",
+    "log4js": "^3.0.6"
   }
 }
