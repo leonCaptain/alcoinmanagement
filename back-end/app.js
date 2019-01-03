@@ -4,15 +4,6 @@ let path = require('path');
 let session = require('express-session');
 let router = require('./routes/router');
 
-let log4js = require('log4js');
-
-log4js.configure({
-  appenders: { cheese: { type: 'file', filename: 'cheese.log' } },
-  categories: { default: { appenders: ['cheese'], level: 'error' } }
-});
- 
-let logger = log4js.getLogger('cheese');
-
 let port = process.env.PORT || 9999;
 let app = express();
 
