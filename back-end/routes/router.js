@@ -9,4 +9,4 @@ router.post(api.holderCoinAdd, holderCoins.addOne);
 router.post(api.holderCoinUpdate, holderCoins.updateOne);
 router.post(api.holderCoinDelete, holderCoins.deleteOne);
 
-module.exports =  router;
+module.exports = router;
