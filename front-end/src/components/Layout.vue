@@ -13,7 +13,7 @@
       <a-menu theme="dark" mode="inline" :defaultSelectedKeys="['1']">
         <a-menu-item key="1">
           <a-icon type="user" />
-					<router-link :style="{ display: 'inline' }" to="/a">投资详情</router-link>
+					<router-link :style="{ display: 'inline' }" to="/">投资详情</router-link>
         </a-menu-item>
         <a-menu-item key="2">
 		  <a-icon type="alert" />

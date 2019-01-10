@@ -2,8 +2,15 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import App from './App';
-import { Button, Layout, Menu, Icon, Avatar, Table, Popconfirm} from "ant-design-vue";
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+//and design 组件 
+import { Button, Layout, Menu, Icon, Avatar, Table, Popconfirm, Form, Input,
+Radio, Modal, Select } from "ant-design-vue";
 import VueRouter from './router';
+import store from './store';
+//注册
 Vue.use(Layout);
 Vue.use(Menu);
 Vue.use(Icon);
@@ -11,12 +18,25 @@ Vue.use(Avatar);
 Vue.use(Table);
 Vue.use(Popconfirm);
 Vue.use(Button);
+Vue.use(Form);
+Vue.use(Input);
+Vue.use(Radio);
+Vue.use(Modal);
+Vue.use(Select);
+// 
+// var instance = axios.create({
+// 	baseURL: 'http://localhost:9999/api/',
+// 	timeout: 1000
+// });
+Vue.use(VueAxios, axios);
 
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+	store,
+    el: '#app',
 	router: VueRouter,
 	render: h => h(App)
 });
+

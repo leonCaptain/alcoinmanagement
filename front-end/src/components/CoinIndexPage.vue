@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a-button class="editable-add-btn" @click="handleAdd">Add</a-button>
+		<coin-add-form></coin-add-form>
     <a-table bordered :dataSource="dataSource" :columns="columns">
       <template slot="name" slot-scope="text, record">
         <editable-cell :text="text" @change="onCellChange(record.key, 'name')"/>
@@ -17,7 +17,9 @@
   </div>
 </template>
 <script>
-import EditableCell from './EditableCell'
+import EditableCell from './EditableCell';
+import CoinAddForm from './CoinAddForm';
+import alCoinAPI from '../api'
 /*
 * EditableCell Code https://github.com/vueComponent/ant-design-vue/blob/master/components/table/demo/EditableCell.vue
 */
@@ -25,34 +27,29 @@ export default {
   name: 'CoinIndexPage',
   components: {
     EditableCell,
+		CoinAddForm
   },
   data () {
     return {
-      dataSource: [{
-        key: '0',
-        name: 'Edward King 0',
-        age: '32',
-        address: 'London, Park Lane no. 0',
-      }, {
-        key: '1',
-        name: 'Edward King 1',
-        age: '32',
-        address: 'London, Park Lane no. 1',
-      }],
-      count: 2,
+      dataSource: this.$store.state.coinIndexData || [],
+      count: this.$store.state.coinIndexData || 1,
       columns: [{
-        title: 'name',
-        dataIndex: 'name',
+        title: '币种',
+        dataIndex: 'coin_name',
         width: '30%',
-        scopedSlots: { customRender: 'name' },
+        scopedSlots: { customRender: 'coin_name' },
       }, {
-        title: 'age',
-        dataIndex: 'age',
+        title: '建仓平均价格',
+        dataIndex: 'average_price',
       }, {
-        title: 'address',
-        dataIndex: 'address',
+        title: '当前实时价格(币安)',
+        dataIndex: 'current_price',
       }, {
-        title: 'operation',
+        title: '收益率(%)',
+        dataIndex: 'yield',
+        scopedSlots: { customRender: 'yield' },
+      },{
+        title: '操作',
         dataIndex: 'operation',
         scopedSlots: { customRender: 'operation' },
       }],
@@ -70,20 +67,10 @@ export default {
       }
     },
     onDelete (key) {
+			debugger
       const dataSource = [...this.dataSource]
       this.dataSource = dataSource.filter(item => item.key !== key)
-    },
-    handleAdd () {
-      const { count, dataSource } = this
-      const newData = {
-        key: count,
-        name: `Edward King ${count}`,
-        age: 32,
-        address: `London, Park Lane no. ${count}`,
-      }
-      this.dataSource = [...dataSource, newData]
-      this.count = count + 1
-    },
+    }
   },
 }
 </script>
