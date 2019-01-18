@@ -1,6 +1,7 @@
 export const mutations = {
 	addCoinIndexData: function (store, indexData) {
-		this.store.coinIndexData.push(indexData);
+		debugger
+		this.state.coinIndexData.push(indexData);
 	}
 	
 }

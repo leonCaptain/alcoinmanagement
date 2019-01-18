@@ -29,26 +29,10 @@ const CoinCreateForm = {
     >
       <a-form layout='vertical' :form="form">
         <a-form-item label='币种'>
-          <coin-category-select> </coin-category-select>
+          <coin-category-select v-decorator=['coin_name']> </coin-category-select>
         </a-form-item>
-        <a-form-item label='Description'>
-          <a-input
-            type='textarea'
-            v-decorator="['description']"
-          />
-        </a-form-item>
-        <a-form-item class='collection-create-form_last-form-item'>
-          <a-radio-group
-            v-decorator="[
-              'modifier',
-              {
-                initialValue: 'private',
-              }
-            ]"
-          >
-              <a-radio value='public'>Public</a-radio>
-              <a-radio value='private'>Private</a-radio>
-            </a-radio-group>
+        <a-form-item label='建仓价格'>
+          <a-input placeholder="average price" v-decorator=['average_price'] />
         </a-form-item>
       </a-form>
     </a-modal>
@@ -75,7 +59,8 @@ export default {
         if (err) {
           return
         }
-        console.log('Received values of form: ', values)
+				debugger
+				this.$store.dispatch('addCoinIndexData', values)
         form.resetFields()
         this.visible = false
       })

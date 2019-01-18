@@ -2,7 +2,7 @@
   <a-select
     showSearch
     :value="value"
-    placeholder="input search text"
+    placeholder="token name"
     style="width: 200px"
     :defaultActiveFirstOption="false"
     :showArrow="false"
@@ -29,6 +29,7 @@ function fetch(value, callback) {
   currentValue = value;
 
   function fake() {
+		if(!that) {return }
     const str = querystring.encode({
       code: 'utf-8',
       q: value,
@@ -72,6 +73,7 @@ export default {
       this.value = value
       fetch(value, data => this.data = data);
     },
-  }
+  },
+	
 }
 </script>
