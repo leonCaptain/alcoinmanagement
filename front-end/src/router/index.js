@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import CoinIndexPage from '@/components/CoinIndexPage';
+import CoinIndexPage from '@/components/HomePage';
 import CoinDetailPage from '@/components/CoinDetailPage';
 //router 注册
 Vue.use(VueRouter)
@@ -10,11 +10,11 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'CoinIndexPage',
+      name: 'HomePage',
       component: CoinIndexPage
     },
 		{
-		  path: '/detail?',
+		  path: '/coin/detail',
 		  name: 'CoinDetailPage',
 		  component: CoinDetailPage
 		},

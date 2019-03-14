@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import ALLayout from './components/Layout';
 import "ant-design-vue/dist/antd.min.css";
+import ALLayout from './components/Layout';
 
 export default {
   name: 'App',

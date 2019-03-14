@@ -2,16 +2,22 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import App from './App';
+import VCharts from 'v-charts'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
 //and design 组件 
-import { Button, Layout, Menu, Icon, Avatar, Table, Popconfirm, Form, Input,
+import { Button, Layout, Menu, Card, Icon, Avatar, Table, Popconfirm, Form, Input,
 Radio, Modal, Select } from "ant-design-vue";
 import VueRouter from './router';
 import store from './store';
+
+import {} from 'v-charts/lib/line'
+
 //注册
+Vue.use(VCharts);
 Vue.use(Layout);
+Vue.use(Card);
 Vue.use(Menu);
 Vue.use(Icon);
 Vue.use(Avatar);

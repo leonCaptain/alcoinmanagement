@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a-button type='primary' @click="showModal">添加</a-button>
+    <a-button type='primary' @click="showModal" >添加</a-button>
     <coin-create-form
       ref="collectionForm"
       :visible="visible"
@@ -29,10 +29,10 @@ const CoinCreateForm = {
     >
       <a-form layout='vertical' :form="form">
         <a-form-item label='币种'>
-          <coin-category-select v-decorator=['coin_name']> </coin-category-select>
+          <coin-category-select> </coin-category-select>
         </a-form-item>
         <a-form-item label='建仓价格'>
-          <a-input placeholder="average price" v-decorator=['average_price'] />
+          <a-input placeholder="average price" />
         </a-form-item>
       </a-form>
     </a-modal>

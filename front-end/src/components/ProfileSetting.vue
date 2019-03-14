@@ -1,14 +1,11 @@
 <template>
 	<view>
-		<span>coin Detail Page</span>
-		<span>{$route.query.id}</span>
-
+		
 	</view>
 </template>
 
 <script>
 	export default {
-		name: 'CoinDetailPage',
 		data() {
 			return {
 				
