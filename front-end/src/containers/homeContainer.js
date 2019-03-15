@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {increment, decrement, reset} from '../actions/counter';
 
 import {connect} from 'react-redux';
+import { DatePicker } from 'antd';
 
  class Counter extends Component {
     render() {
@@ -20,6 +21,7 @@ import {connect} from 'react-redux';
                     this.props.reset()
                 }>重置
                 </button>
+                <DatePicker> </DatePicker>
             </div>
         )
     }

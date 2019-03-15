@@ -1,5 +1,3 @@
-import { INCREMENT, DECREMENT, RESET } from '../constant';
-
 //整合reudcer
 const initialState = {
   initialCount: 10,
