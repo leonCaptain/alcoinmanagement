@@ -1,22 +1,12 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import CoinIndexPage from '@/components/CoinIndexPage';
-import CoinDetailPage from '@/components/CoinDetailPage';
-//router 注册
-Vue.use(VueRouter)
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import Home from '../containers/homeContainer.jsx';
+let getRouter = () => (
+  <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/Home" component={Home} />
+      </Switch>
+  </Router>
+)
 
-//router 内容
-export default new VueRouter({
-  routes: [
-    {
-      path: '/',
-      name: 'CoinIndexPage',
-      component: CoinIndexPage
-    },
-		{
-		  path: '/detail?',
-		  name: 'CoinDetailPage',
-		  component: CoinDetailPage
-		},
-  ],
-});
+export default getRouter;
