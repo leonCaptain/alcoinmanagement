@@ -1,10 +1,10 @@
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
-import Home from '../containers/homeContainer';
-
+import Home from '../containers/homeContainer.jsx';
 let getRouter = () => (
   <Router>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/Home" component={Home} />
       </Switch>
   </Router>
 )
