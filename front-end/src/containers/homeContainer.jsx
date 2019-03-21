@@ -3,6 +3,7 @@ import {increment, decrement, reset} from '../actions/counter';
 
 import {connect} from 'react-redux';
 import { DatePicker } from 'antd';
+import * as NewChart from '../components/newChart.jsx';
 
  class Counter extends Component {
     render() {
@@ -22,7 +23,9 @@ import { DatePicker } from 'antd';
                 }>重置
                 </button>
                 <DatePicker> </DatePicker>
+				<NewChart></NewChart>
             </div>
+
         )
     }
 }

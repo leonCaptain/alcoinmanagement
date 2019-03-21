@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import store from './store/index';
 import getRouter from './router/index';
 
+
 /*初始化*/
 // 如果没该步骤，页面会出现空白
 renderWithHotReload(getRouter());
