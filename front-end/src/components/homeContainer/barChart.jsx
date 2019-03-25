@@ -1,6 +1,6 @@
 import { Chart, Tooltip, Axis, Bar, Coord } from 'viser-react';
 import * as React from 'react';
-import BarChartData from '../data/barChartData';
+import BarChartData from '../../data/homeContainer/barChartData';
 
 const sourceData = BarChartData
 const DataSet = require('@antv/data-set');

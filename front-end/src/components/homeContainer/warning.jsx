@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Icon} from 'antd';
-import '../css/warning.css';
-import tsIcon from '../assets/iconwartning.png';
+import './css/warning.css';
+import tsIcon from '../../assets/iconwartning.png';
 
 
 class Ullist extends Component {
@@ -10,20 +10,21 @@ class Ullist extends Component {
 		this.state = {
 			list: [{
 					id: 0,
-					text: 0,
-					data:'what????',
+					text: 'Evaluape评级 &#91Fetch.AI] :人工智能驱动的智能账本,评分:6.9',
+					data:'一小时前',
 				},
 				{
 					id: 1,
-					text: 0,
-					data:'what????',
+					text: 'Evaluape评级 &#91Fetch.AI] :人工智能驱动的智能账本,评分:6.9',
+					data:'一小时前',
 				},
 				{
 					id: 2,
-					text: 0,
-					data:'what????',
+					text: 'Evaluape评级 &#91Fetch.AI] :人工智能驱动的智能账本,评分:6.9',
+					data:'一小时前',
 				}
 			],
+			warningtext:'已关注项目提醒'
 			
 
 		};
@@ -32,7 +33,7 @@ class Ullist extends Component {
 		return (
 		    <div className = "warning" >
 			<div className="Topwaring">
-			<p style={{float: 'left' }}>已关注项目提醒</p>
+			<p style={{float: 'left' }}>{this.state.warningtext}</p>
 			<Icon type="ellipsis" style={{float: 'right' }}/>
 			</div>
 			<ul>
@@ -42,7 +43,7 @@ class Ullist extends Component {
 					<div
 					 className='icon-btn'>
 					</div>
-					<div style={{float: 'right'}}>
+					<div style={{float: 'right'}} className="warningText" >
 					<span >
 						{ item.text }
 					</span>

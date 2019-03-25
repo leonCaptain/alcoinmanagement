@@ -3,15 +3,19 @@ import {increment, decrement, reset} from '../actions/counter';
 import {connect} from 'react-redux';
 import { DatePicker } from 'antd';
 import {Layout, Menu, Breadcrumb, Icon,Row, Col} from 'antd';
-import LineChart from '../components/lineChart';
-import BarChart from '../components/barChart';
-import SimplebarChart from '../components/simplebarChart';
-import Warning from '../components/warning';
+import LineChart from '../components/homeContainer/lineChart';
+import BarChart from '../components/homeContainer/barChart';
+import SimplebarChart from '../components/homeContainer/simplebarChart';
+import Warning from '../components/homeContainer/warning';
 import { Avatar } from 'antd';
-import '../css/homeContainer.css';
+import '../components/homeContainer/css/homeContainer.css';
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 class Counter extends Component {
+	
+	
+	
+	
     render() {
     return (
 	<Layout>
