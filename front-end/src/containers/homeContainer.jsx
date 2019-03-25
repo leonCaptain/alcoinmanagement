@@ -45,19 +45,27 @@ class Counter extends Component {
 								<Warning></Warning>
 								<Warning></Warning>
 								<Warning></Warning>
-							
 						</div>,
 						<div className="homechart">
 							<div className="chart barchart">
-								<div className="homechartheader">交易量排行</div>
+								<div className="homechartheader">
+								<p style={{float: 'left' }}>交易量排行榜前10(24h)</p>
+								<Icon type="ellipsis" style={{float: 'right' }}/>
+								</div>
 								<BarChart></BarChart>
 							</div>
 							<div className="chart barchart">
-								<div className="homechartheader">交易量排行</div>
+								<div className="homechartheader">
+								<p style={{float: 'left' }}>涨幅榜前5(24h)</p>
+								<Icon type="ellipsis" style={{float: 'right' }}/>
+								</div>
 								<SimplebarChart></SimplebarChart>
 							</div>
 							<div className="chart barchart">
-								<div className="homechartheader">交易量排行</div>
+								<div className="homechartheader">
+								<p style={{float: 'left' }}>跌幅榜前5(24h)</p>
+								<Icon type="ellipsis" style={{float: 'right' }}/>
+								</div>
 								<SimplebarChart></SimplebarChart>
 							</div>
 						</div>,

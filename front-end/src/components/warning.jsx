@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import {Icon} from 'antd';
 import '../css/warning.css';
+import tsIcon from '../assets/iconwartning.png';
 
 
 class Ullist extends Component {
@@ -9,17 +11,17 @@ class Ullist extends Component {
 			list: [{
 					id: 0,
 					text: 0,
-					data:'what????'
+					data:'what????',
 				},
 				{
 					id: 1,
 					text: 0,
-					data:'what????'
+					data:'what????',
 				},
 				{
 					id: 2,
 					text: 0,
-					data:'what????'
+					data:'what????',
 				}
 			],
 			
@@ -29,23 +31,25 @@ class Ullist extends Component {
 	render () {
 		return (
 		    <div className = "warning" >
-			<div className="Topwaring">已关注项目提醒</div>
+			<div className="Topwaring">
+			<p style={{float: 'left' }}>已关注项目提醒</p>
+			<Icon type="ellipsis" style={{float: 'right' }}/>
+			</div>
 			<ul>
 			{
 				this.state.list.map((item, index) =>
 					<li key={item.id}id={item.id} > 
 					<div
-					 className='check-btn'
-					 id={item.id}
-					 style={{background:'url(${img1})' }}>
-					
+					 className='icon-btn'>
 					</div>
+					<div style={{float: 'right'}}>
 					<span >
 						{ item.text }
 					</span>
-					<span className="delete-btn">
+					<span className="time-btn">
 						{ item.data }
 					</span>
+					</div>
 					</li>
 					
 				)
