@@ -1,9 +1,7 @@
-# back-end 简介
-1. 技术架构 express + mysql
-## 启动
-npm/cnpm install 
+# Awesome Project Build with TypeORM
 
-默认端口是9999
-命令后 nodemon app
+Steps to run this project:
 
-# 文件介绍
+1. Run `npm i` command
+2. Setup database settings inside `ormconfig.json` file
+3. Run `npm start` command
