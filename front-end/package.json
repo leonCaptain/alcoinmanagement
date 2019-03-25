@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@antv/data-set": "^0.10.2",
+    "@antv/g2": "^3.4.10",
+    "antd": "^3.15.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-plugin-import": "^1.11.0",
