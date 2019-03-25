@@ -40,41 +40,27 @@ class Counter extends Component {
 						</SubMenu>
 					</Menu>
 				</Sider>
-				<Layout style={{ padding: '40px 40px 40px',background: 'rgba(246,246,246,1)' }}>
-					<Content style={{background: '#fff' }}>
+				<Layout style={{ padding: '40px 0px 40px',background: 'rgba(246,246,246,1)' }}>
 						<div className="homewarning">
 								<Warning></Warning>
 								<Warning></Warning>
 								<Warning></Warning>
 							
 						</div>,
-						<Row>
-							<Col lg={{ span: 7 }}>
-							<div>
-								<Header style={{ backgroundColor: '#FFFFFF',color:'#0284FE',borderBottom:'1px #ccc solid' }}>
-									概述
-								</Header>
+						<div className="homechart">
+							<div className="chart barchart">
+								<div className="homechartheader">交易量排行</div>
 								<BarChart></BarChart>
 							</div>
-							</Col>
-							<Col lg={{ span: 7, offset: 1 }}>
-							<div>
-								<Header style={{ backgroundColor: '#FFFFFF',color:'#0284FE',borderBottom:'1px #ccc solid' }}>
-									概述
-								</Header>
+							<div className="chart barchart">
+								<div className="homechartheader">交易量排行</div>
 								<SimplebarChart></SimplebarChart>
 							</div>
-							</Col>
-							<Col lg={{ span: 7, offset: 1 }}>
-							<div>
-								<Header style={{ backgroundColor: '#FFFFFF',color:'#0284FE',borderBottom:'1px #ccc solid' }}>
-									概述
-								</Header>
+							<div className="chart barchart">
+								<div className="homechartheader">交易量排行</div>
 								<SimplebarChart></SimplebarChart>
 							</div>
-							</Col>
-						</Row>,
-					</Content>
+						</div>,
 				</Layout>
 			</Layout>
 		</Layout>
