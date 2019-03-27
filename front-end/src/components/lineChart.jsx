@@ -1,6 +1,6 @@
 import { Chart, Tooltip, Axis, Line, Point } from 'viser-react';
 import * as React from 'react';
-import LineChartData from '../../data/homeContainer/LineChartData';
+import LineChartData from '../data/homeContainer/LineChartData';
 
 const data = LineChartData
 const scale = [{
@@ -12,7 +12,7 @@ const scale = [{
   max: 1,
 }];
 
-export default class NewChart extends React.Component {
+export default class lineChart extends React.Component {
   render() {
     return (
       <Chart  width={600} height={400} data={data} scale={scale}>

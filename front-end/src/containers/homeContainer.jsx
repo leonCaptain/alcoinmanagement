@@ -1,37 +1,37 @@
 import React, {Component} from 'react';
-import {increment, decrement, reset} from '../actions/counter';
 import {connect} from 'react-redux';
-import { DatePicker } from 'antd';
-import {Layout, Menu, Breadcrumb, Icon,Row, Col} from 'antd';
-import LineChart from '../components/homeContainer/lineChart';
-import BarChart from '../components/homeContainer/barChart';
-import SimplebarChart from '../components/homeContainer/simplebarChart';
-import Warning from '../components/homeContainer/warning';
-import { Avatar } from 'antd';
-import '../components/homeContainer/css/homeContainer.css';
+import {increment, decrement, reset} from '../actions/counter';
+import {Layout, Menu, Breadcrumb,Icon,Row,Col,Avatar} from 'antd';
+import LineChart from '../components/lineChart';
+import BarChart from '../components/barChart';
+import SimplebarChart from '../components/simplebarChart';
+import Warning from '../components/warning';
+import User from '../components/user';
+import Notice from '../components/noticelist';
+import './css/homeContainer.css';
+
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
+
 class Counter extends Component {
-	
-	
-	
-	
     render() {
     return (
-	<Layout>
-			<Header className="homeTopheader">
+	<Layout className="home">
+			<Header className="Topheader">
 				<div style={{float: 'left' }}>
-					<h1>LOGO</h1>
+					<h1 className="Logo">LOGO</h1>
 				</div>
 				<div style={{float: 'right' }}>
-					<Icon type="search" />
-					<Icon type="bell" />
-					<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-					<span>wangliang</span>
+					<Notice noticeList={this.props.noticeListData} 
+						loadNoticeList={this.props.loadNoticeList} 
+					/>
+					<User userdata={this.props.userData} 
+					loadUser={this.props.loadUser} 
+					/>
 				</div>
 			</Header>
 			<Layout >
-				<Sider  className="homeSider">
+				<Sider  className="home-Sider">
 					<Header style={{ backgroundColor: '#FFFFFF',color:'#0284FE',borderBottom:'1px #ccc solid' }}>
 						概述
 					</Header>
@@ -44,29 +44,29 @@ class Counter extends Component {
 						</SubMenu>
 					</Menu>
 				</Sider>
-				<Layout style={{ padding: '40px 0px 40px',background: 'rgba(246,246,246,1)' }}>
-						<div className="homewarning">
+				<Layout className="home-Content">
+						<div className="content-Warning">
 								<Warning></Warning>
 								<Warning></Warning>
 								<Warning></Warning>
 						</div>,
-						<div className="homechart">
+						<div className="content-Chart">
 							<div className="chart barchart">
-								<div className="homechartheader">
+								<div className="chart-Header">
 								<p style={{float: 'left' }}>交易量排行榜前10(24h)</p>
 								<Icon type="ellipsis" style={{float: 'right' }}/>
 								</div>
-								<BarChart></BarChart>
+								<BarChart barchartdata={this.props.barchartdata}></BarChart>
 							</div>
 							<div className="chart barchart">
-								<div className="homechartheader">
+								<div className="chart-Header">
 								<p style={{float: 'left' }}>涨幅榜前5(24h)</p>
 								<Icon type="ellipsis" style={{float: 'right' }}/>
 								</div>
 								<SimplebarChart></SimplebarChart>
 							</div>
 							<div className="chart barchart">
-								<div className="homechartheader">
+								<div className="chart-Header">
 								<p style={{float: 'left' }}>跌幅榜前5(24h)</p>
 								<Icon type="ellipsis" style={{float: 'right' }}/>
 								</div>
@@ -80,8 +80,11 @@ class Counter extends Component {
     }
 }
 const mapStateToProps = (state) => {
-    return {
-        counter: state.home.counter
+	return {
+        counter: state.home.counter,
+		barchartdata:state.home.barchartdata,
+		userData:state.home.userdata,
+		noticeListData:state.home.noticeList
     }
 };
 const mapDispatchToProps = (dispatch) => {
@@ -89,12 +92,6 @@ const mapDispatchToProps = (dispatch) => {
         increment: () => {
             dispatch(increment())
         },
-        decrement: () => {
-            dispatch(decrement())
-        },
-        reset: ()=> {
-            dispatch(reset())
-        }
     }
 };
 //

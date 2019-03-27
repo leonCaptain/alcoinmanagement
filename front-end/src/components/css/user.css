@@ -1,0 +1,16 @@
+.user {
+	display: flex;
+	height: 56px;
+	float: right;
+	margin-top: -10px;
+}
+.user div:first-child {}
+.user div:last-child {
+	margin-left: 10px;
+}
+.user a {
+	color: #bbb !important;
+}
+.user a:hover {
+	color: #fff !important;
+}

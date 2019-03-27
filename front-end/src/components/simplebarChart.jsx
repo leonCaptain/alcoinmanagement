@@ -1,6 +1,6 @@
 import { Chart, Tooltip, Axis, Bar } from 'viser-react';
 import * as React from 'react';
-import barData from '../../data/homeContainer/simplebarChart';
+import barData from '../data/homeContainer/simplebarChart';
 
 const data = barData
 const scale = [{

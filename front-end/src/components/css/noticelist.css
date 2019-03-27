@@ -1,0 +1,12 @@
+.notice i {
+	color: #bbb !important;
+	font-size: 20px;
+}
+
+.notice i:hover {
+	color: #fff !important;
+}
+.notice{
+	float: left;
+	margin-right: 20px;
+}
