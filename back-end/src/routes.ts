@@ -24,7 +24,7 @@ export const Routes = [{
     action: "remove"
 },{
     method: "get",
-    route: "/portfolio/:uid",
+    route: "/portfolio/:id",
     controller: PortfolioController,
     action: "all"
 }, {

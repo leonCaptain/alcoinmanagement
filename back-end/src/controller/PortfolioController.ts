@@ -7,10 +7,11 @@ export class PortfolioController {
   private portfolioRepository = getRepository(Portfolio);
 
   async all(request: Request, response: Response, next: NextFunction) {
-    return this.portfolioRepository.findOne(request.params.uid);
+    return this.portfolioRepository.findOne(request.params.id);
   }
 
   async save(request: Request, response: Response, next: NextFunction) {
-    return this.portfolioRepository.save(request.body);
+  	const portfolio = this.portfolioRepository.create(request.body)
+    return this.portfolioRepository.save(portfolio);
   }
 }

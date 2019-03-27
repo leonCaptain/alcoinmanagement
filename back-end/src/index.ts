@@ -17,17 +17,25 @@ createConnection().then(async connection => {
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
       next();
     });
+    
+
+    const defaultMsg = {
+        msg: "noting result",
+        code: "1404"
+    }    
 
     // register express routes from defined application routes
     Routes.forEach(route => {
         (app as any)[route.method](route.route, (req: Request, res: Response, next: Function) => {
             const result = (new (route.controller as any))[route.action](req, res, next);
             if (result instanceof Promise) {
-                result.then(result => result !== null && result !== undefined ? res.send(result) : undefined)
-                       .catch(err => next(err));
+                result.then(result => result !== null && result !== undefined ? res.send(result) : res.send(defaultMsg))
+                      
 
             } else if (result !== null && result !== undefined) {
                 res.json(result);
+            } else {
+                res.json(defaultMsg);
             }
         });
     });

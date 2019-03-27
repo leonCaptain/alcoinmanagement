@@ -1,4 +1,4 @@
-import {Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn, PrimaryColumn} from "typeorm";
 import BaseEntity from './BaseEntity';
 import User from './User';
 
@@ -8,23 +8,22 @@ export default class Portfolio extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
- //one to many
+
   @OneToOne(type => User, user => user.id, { onDelete: 'CASCADE' })
-  @JoinColumn()
   user: User;
 
-  @Column("varchar", {length: 50})
+  @Column("varchar", {length: 50, name: 'name',  default: "默认组合"})
   name: string;
 
-  @Column("double", {name: "total_value_dollar"})
+  @Column("double", {name: "total_value_dollar", default: "0"})
   totalValueByDollar: number;
 
-  @Column("double", {name: "total_value_btc"})
+  @Column("double", {name: "total_value_btc", default: "0"})
   totalValueByBtc: number;
 
-  @Column("double", {name: "total_profit_rate"})
+  @Column("float", {name: "total_profit_rate", default: "0"})
   totalProfitRate: number;
 
-  @Column("double", {name: "total_profit"})
+  @Column("double", {name: "total_profit", default: "0"})
   totalProfit: number;
 }

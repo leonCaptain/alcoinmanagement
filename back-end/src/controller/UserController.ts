@@ -15,7 +15,7 @@ export class UserController {
     }
 
     async save(request: Request, response: Response, next: NextFunction) {
-        const user = this.userRepository.create(request.body)
+        const user = this.userRepository.create(request.body);
         return this.userRepository.save(user);
     }
 
