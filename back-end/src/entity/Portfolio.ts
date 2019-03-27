@@ -9,9 +9,9 @@ export default class Portfolio extends BaseEntity {
   id: number;
 
  //one to many
-  @OneToOne(type => User)
+  @OneToOne(type => User, user => user.id, { onDelete: 'CASCADE' })
   @JoinColumn()
-  public userId: number;
+  user: User;
 
   @Column("varchar", {length: 50})
   name: string;

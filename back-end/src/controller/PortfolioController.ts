@@ -1,6 +1,6 @@
 import {getRepository} from "typeorm";
 import {NextFunction, Request, Response} from 'express';
-import { Portfolio } from '../entity/Portfolio';
+import Portfolio  from '../entity/Portfolio';
 import {StartOrClose} from "../entity/BaseEntity";
 
 export class PortfolioController {

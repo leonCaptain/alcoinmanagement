@@ -1,6 +1,6 @@
 import {getRepository} from "typeorm";
 import {NextFunction, Request, Response} from "express";
-import {PortfolioCoin} from "../entity/PortfolioCoin";
+import PortfolioCoin from "../entity/PortfolioCoin";
 import {StartOrClose} from "../entity/BaseEntity";
 
 export class PortfolioCoinController {
