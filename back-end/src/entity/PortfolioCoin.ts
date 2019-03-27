@@ -1,4 +1,4 @@
-import {Entity, PrimaryGeneratedColumn, Column, ManyToOne} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn} from "typeorm";
 import BaseEntity from './BaseEntity';
 import Portfolio from './Portfolio';
 
@@ -8,9 +8,11 @@ export default class PortfolioCoin extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @ManyToOne(type => Portfolio, portfolioID => Portfolio.id)
-    @Column({ name: "portfolio_id", type: "int" })
-    portfolioID: number;
+    @ManyToOne(type => Portfolio, portfolio => portfolio.id, {
+        onDelete:'CASCADE'
+    })
+    @JoinColumn()
+    portfolio: Portfolio;
 
     @Column("varchar", { length: 50})
     coin: string;

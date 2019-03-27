@@ -8,11 +8,17 @@ export enum StartOrClose {
 
 export default abstract class BaseEnitty {
   //, {name: "create_time", nulltable: true}
-  @Column('datetime')
+  @Column({
+    type: 'datetime',
+    default: '1970-01-01 00:00:00'
+  })
   public createTime: Date;
 
   //, {name: "update_time", nulltable: true}
-  @Column('datetime')
+  @Column({
+    type: 'datetime',
+    default: '1970-01-01 00:00:00'
+  })
   public updateTime: Date;
 
   @Column({

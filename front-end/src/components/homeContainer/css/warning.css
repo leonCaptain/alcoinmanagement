@@ -1,0 +1,87 @@
+.warning {
+	width: 346px;
+	height: 340px;
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+	border-radius: 2px;
+	float: left;
+	margin-left: 39px;
+}
+
+.warning ul {
+	padding: 0px;
+}
+
+.warning ul li {
+	list-style: none;
+	line-height: 76px;
+	border-bottom: 1px #ccc solid;
+	color: #2EB872;
+	margin: 16px;
+	width: 314px;
+	height: 76px;
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0px 1px 0px 0px rgba(240, 240, 240, 1);
+}
+
+.Topwaring {
+	width: 346px;
+	height: 40px;
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0px 1px 0px 0px rgba(240, 240, 240, 1);
+	border-radius: 2px 2px 0px 0px;
+}
+
+.warning ul li .delete-btn {
+	display: block;
+}
+
+.icon-btn {
+	color: #ccc;
+	float: left;
+	cursor: pointer;
+	display: block;
+	width: 40px;
+	height: 40px;
+	border: 1px #ccc solid;
+	border-radius: 5px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background: url(../../../assets/iconwartning.png);
+}
+
+.warningText {
+	width: 256px;
+	height: 77px;
+	font-size: 13px;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(78, 93, 120, 1);
+	line-height: 20px;
+	position: relative;
+}
+
+.time-btn {
+	width: 50px;
+	height: 16px;
+	font-size: 12px;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(176, 183, 195, 1);
+	line-height: 16px;
+	position: absolute;
+	top: 40px;
+	left:0px;
+}
+
+.clearfloat:after {
+	display: block;
+	clear: both;
+	content: "";
+	visibility: hidden;
+	height: 0
+}
+
+.clearfloat {
+	zoom: 1
+}
