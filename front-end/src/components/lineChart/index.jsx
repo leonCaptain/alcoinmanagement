@@ -4,13 +4,13 @@ import LineChartData from '../../data/homeContainer/LineChartData';
 
 const data = LineChartData
 const scale = [{
-  dataKey: 'value',
-  min: 0,
-},{
-  dataKey: 'year',
-  min: 0,
-  max: 1,
-}];
+					dataKey: 'value',
+					min: 0,
+      },{
+					dataKey: 'year',
+					min: 0,
+					max: 1,
+      }];
 
 export default class lineChart extends React.Component {
   render() {
