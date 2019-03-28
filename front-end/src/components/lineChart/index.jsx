@@ -1,6 +1,6 @@
 import { Chart, Tooltip, Axis, Line, Point } from 'viser-react';
 import * as React from 'react';
-import LineChartData from '../data/homeContainer/LineChartData';
+import LineChartData from '../../data/homeContainer/LineChartData';
 
 const data = LineChartData
 const scale = [{

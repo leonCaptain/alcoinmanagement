@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Icon} from 'antd';
-import './css/warning.css';
-import tsIcon from '../assets/iconwartning.png';
+import './index.css';
+import tsIcon from '../../assets/iconwartning.png';
 
 
 class Ullist extends Component {

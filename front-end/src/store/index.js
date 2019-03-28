@@ -1,4 +1,4 @@
-import homeReducer from '../reducers/homeReducer';
+import homeReducer from '../reducers/homeReducer/index';
 import { routerReducer } from 'react-router-redux'
 import { combineReducers, createStore } from 'redux';
 

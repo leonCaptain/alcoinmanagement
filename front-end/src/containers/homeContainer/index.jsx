@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {increment, decrement, reset} from '../actions/counter';
+import {increment, decrement, reset} from '../../actions/counter';
 import {Layout, Menu, Breadcrumb,Icon,Row,Col,Avatar} from 'antd';
-import LineChart from '../components/lineChart';
-import BarChart from '../components/barChart';
-import SimplebarChart from '../components/simplebarChart';
-import Warning from '../components/warning';
-import User from '../components/user';
-import Notice from '../components/noticelist';
-import './css/homeContainer.css';
+import LineChart from '../../components/lineChart/index.jsx';
+import BarChart from '../../components/barChart/index.jsx';
+import SimplebarChart from '../../components/simplebarChart/index.jsx';
+import Warning from '../../components/warning/index.jsx';
+import User from '../../components/user/index.jsx';
+import Notice from '../../components/noticelist/index.jsx';
+import { loadUser } from '../../actions/user';
+import './index.css';
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -18,8 +19,9 @@ class Counter extends Component {
     return (
 	<Layout className="home">
 			<Header className="Topheader">
-				<div style={{float: 'left' }}>
-					<h1 className="Logo">LOGO</h1>
+				<div  className="Logo"  style={{float: 'left' }}>
+				    <p></p>
+					<h1>Alcoinanalysis</h1>
 				</div>
 				<div style={{float: 'right' }}>
 					<Notice noticeList={this.props.noticeListData} 
@@ -81,9 +83,13 @@ class Counter extends Component {
 }
 const mapStateToProps = (state) => {
 	return {
+		userData: {
+			loading: state.home.userData.loading,
+			error: state.home.userData.error,
+			user: state.home.userData.user,
+		},
         counter: state.home.counter,
 		barchartdata:state.home.barchartdata,
-		userData:state.home.userdata,
 		noticeListData:state.home.noticeList
     }
 };
@@ -92,6 +98,9 @@ const mapDispatchToProps = (dispatch) => {
         increment: () => {
             dispatch(increment())
         },
+		/* loadUser:()=>{
+			dispatch(loadUser())
+		}, */
     }
 };
 //

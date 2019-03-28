@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Badge, Icon } from 'antd';
-import './css/noticelist.css';
+import './index.css';
 
 class Notice extends Component {
 

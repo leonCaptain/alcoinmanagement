@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Avatar } from 'antd';
-import './css/user.css';
+import './index.css';
 
 class User extends Component {
 	constructor(props) {
@@ -9,20 +9,20 @@ class User extends Component {
 	}
 	static propTypes = {
 		loadUser: PropTypes.func,
-		userData: PropTypes.object,
+		userdata: PropTypes.object,
 	};
 	
-	/* componentDidMount () {
-		this.props.loadUser();
-	} */
+	componentDidMount () {
+		/* this.props.loadUser(); */
+	}
      
 	render () {
-		const userName = this.props.userdata.name ? this.props.userdata.name : '未登录';
+		const userName = this.props.userdata.user.name ? this.props.userdata.user.name : '未登录';
 		return (
 			<div className="user">
 				<div>
-					{this.props.userdata.icon ? 
-						<Avatar size="large" src={`/assets/${this.props.userdata.icon}`} /> 
+					{this.props.userdata.user.icon ? 
+						<Avatar size="large" src={`./assets/${this.props.userdata.user.icon}`} /> 
 						: 
 						<Avatar size="large" icon="user" />	
 					}

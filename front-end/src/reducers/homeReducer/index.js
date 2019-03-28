@@ -1,7 +1,5 @@
 //整合reudcer
 const initialState = {
-  initialCount: 10,
-  counter: 10,
   barchartdata:[
   { coin: 'btc', marketValue: 80 },
   { coin: 'eth', marketValue: 100 },
@@ -14,13 +12,17 @@ const initialState = {
 	{ coin: 'xvg', marketValue: 1500 },
 	{ coin: 'bnb', marketValue: 2000 }
 ],
-  userdata:{
+  userData: {
+  	loading: false,
+  	error: false,
+  	user: {
 			"id": "0001",
 			"name": "鲁文静",
 			"age": 22,
 			"sex": "女",
 			"icon": "userIcon.png"
 		},
+  },
 		noticeList: [{
 			"id": "0001",
 			"name": "哈哈",
