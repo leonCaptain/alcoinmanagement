@@ -6,6 +6,8 @@ import LineChart from '../../components/lineChart/index.jsx';
 import BarChart from '../../components/barChart/index.jsx';
 import SimplebarChart from '../../components/simplebarChart/index.jsx';
 import Warning from '../../components/warning/index.jsx';
+import PositionWarning from '../../components/positionwarning/index.jsx';
+import CoinWarning from '../../components/coinwarning/index.jsx';
 import User from '../../components/user/index.jsx';
 import Notice from '../../components/noticelist/index.jsx';
 import { loadUser } from '../../actions/user';
@@ -49,30 +51,30 @@ class Counter extends Component {
 				<Layout className="home-Content">
 						<div className="content-Warning">
 								<Warning></Warning>
-								<Warning></Warning>
-								<Warning></Warning>
+								<CoinWarning></CoinWarning>
+								<PositionWarning></PositionWarning>
 						</div>,
 						<div className="content-Chart">
 							<div className="chart barchart">
 								<div className="chart-Header">
 								<p style={{float: 'left' }}>交易量排行榜前10(24h)</p>
-								<Icon type="ellipsis" style={{float: 'right' }}/>
+								<Icon type="ellipsis" style={{float: 'right',marginTop:'12px',marginRight:'16px'  }}/>
 								</div>
 								<BarChart barchartdata={this.props.barchartdata}></BarChart>
 							</div>
 							<div className="chart barchart">
 								<div className="chart-Header">
 								<p style={{float: 'left' }}>涨幅榜前5(24h)</p>
-								<Icon type="ellipsis" style={{float: 'right' }}/>
+								<Icon type="ellipsis" style={{float: 'right',marginTop:'12px',marginRight:'16px'  }}/>
 								</div>
-								<SimplebarChart></SimplebarChart>
+								<SimplebarChart color={['coin',[ '#92FEFF','#29DEDF','#79EF99','#1AD74D','#15AD3F' ]]}></SimplebarChart>
 							</div>
 							<div className="chart barchart">
 								<div className="chart-Header">
 								<p style={{float: 'left' }}>跌幅榜前5(24h)</p>
-								<Icon type="ellipsis" style={{float: 'right' }}/>
+								<Icon type="ellipsis" style={{float: 'right' ,marginTop:'12px',marginRight:'16px' }}/>
 								</div>
-								<SimplebarChart></SimplebarChart>
+								<SimplebarChart color={['coin',[ '#FFE172','#FFC554','#FFA1A1','#FF5D5D','#DD2727' ]]}></SimplebarChart>
 							</div>
 						</div>,
 				</Layout>

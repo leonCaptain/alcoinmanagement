@@ -11,6 +11,7 @@ export default class BarChart extends React.Component {
 		
 		const dv = new DataSet.View().source(this.props.barchartdata);
 		const data = dv.rows;
+		const padding=[ 16, 30, 20, 50];
 		
 		dv.transform({
 		  type: 'sort',
@@ -20,11 +21,11 @@ export default class BarChart extends React.Component {
 		});
 
     return (
-      <Chart forceFit height={472} data={data}>
+      <Chart forceFit height={472} data={data} padding={padding}>
         <Coord type="rect" direction="LB" />
         <Tooltip />
         <Axis dataKey="coin" label={{ offset: 12 }} />
-        <Bar position="coin*marketValue" color="coin" size={8}/>
+        <Bar position="coin*marketValue" color={['coin',[ '#9FA8DA','#3FCDFF','#FFD769','#EB9C00','#DD2727' ]]} size={8}/>
       </Chart>
     );
   }

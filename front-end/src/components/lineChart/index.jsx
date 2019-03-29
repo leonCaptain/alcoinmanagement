@@ -2,6 +2,7 @@ import { Chart, Tooltip, Axis, Line, Point } from 'viser-react';
 import * as React from 'react';
 import LineChartData from '../../data/homeContainer/LineChartData';
 
+const padding=[ 16, 30, 20, 50];
 const data = LineChartData
 const scale = [{
 					dataKey: 'value',
@@ -15,7 +16,7 @@ const scale = [{
 export default class lineChart extends React.Component {
   render() {
     return (
-      <Chart  width={600} height={400} data={data} scale={scale}>
+      <Chart  width={600} height={400} data={data} scale={scale}padding={padding}>
         <Tooltip />
         <Axis />
         <Line position="year*value" />

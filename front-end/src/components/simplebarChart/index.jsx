@@ -8,13 +8,21 @@ const scale = [{
   tickInterval: 30,
 }];
 
+
 export default class SimplebarChart extends React.Component {
+	constructor(props) {
+	  super(props);
+	}
   render() {
+		
+		const padding=[ 16, 30, 20, 50];
+		const color=this.props.color;
+		
     return (
-      <Chart  forceFit height={239} data={data} scale={scale}>
+      <Chart  forceFit height={239} data={data} scale={scale} padding={padding}>
         <Tooltip />
         <Axis />
-        <Bar position="coin*sales" color="coin" size={16} />
+        <Bar position="coin*sales" color={color} size={16} />
       </Chart>
     );
   }

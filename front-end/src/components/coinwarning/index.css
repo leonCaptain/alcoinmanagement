@@ -1,4 +1,4 @@
-.warning {
+.coinwarning {
 	width: 346px;
 	height: 340px;
 	background: rgba(255, 255, 255, 1);
@@ -7,10 +7,12 @@
 	float: left;
 	margin-left: 39px;
 }
-.warning ul {
+
+.coinwarning ul {
 	padding: 0px;
 }
-.warning ul li {
+
+.coinwarning ul li {
 	list-style: none;
 	line-height: 76px;
 	color: #2EB872;
@@ -20,33 +22,33 @@
 	background: rgba(255, 255, 255, 1);
 	box-shadow: 0px 1px 0px 0px rgba(240, 240, 240, 1);
 }
-.warning ul li:last-child {
+
+.coinwarning ul li:last-child {
 	width: 314px;
 	height: 76px;
 	background: rgba(255, 255, 255, 1);
 	box-shadow: 0px 0px 0px 0px rgba(240, 240, 240, 1);
 }
-.Topwaring {
+
+.coinTopwaring {
 	width: 346px;
 	height: 40px;
 	background: rgba(255, 255, 255, 1);
 	box-shadow: 0px 1px 0px 0px rgba(240, 240, 240, 1);
 	border-radius: 2px 2px 0px 0px;
 }
-.Topwaring p {
+
+.coinTopwaring p {
 	margin-left: 16px;
 	margin-top: 11px;
-	width: 98px;
+	width: 140;
 	height: 18px;
 	font-size: 14px;
 	font-weight: 400;
 	color: rgba(10, 31, 68, 1);
 	line-height: 18px;
 }
-.warning ul li .delete-btn {
-	display: block;
-}
-.icon-btn {
+.coin-icon-btn {
 	color: #ccc;
 	float: left;
 	cursor: pointer;
@@ -59,14 +61,40 @@
 	background-attachment: fixed;
 	background: url(../../assets/iconwartning.png);
 }
-
-.warningText {
+.coinwarningText {
 	width: 256px;
-	height: 77px;
+	height: 87px;
 	position: relative;
 }
-
-.warningText p {
+.coinwarningText .coinMoney {
+	width: 102px;
+	height: 17px;
+	font-size: 13px;
+	font-weight: 400;
+	color: rgba(78, 93, 120, 1);
+	line-height: 17px;
+	float: left;
+}
+.coinwarningText .circle {
+	display: block;
+	width: 4px;
+	height: 4px;
+	background: rgba(176, 183, 195, 1);
+	border-radius: 50%;
+	float: left;
+	margin: 7px 15px 7px 15px;
+}
+.coinwarningText .K-Line-Index {
+	width: 110px;
+	height: 17px;
+	font-size: 13px;
+	font-family: '';
+	font-weight: 400;
+	color: rgba(78, 93, 120, 1);
+	line-height: 17px;
+	float: left;
+}
+.coinwarningText p {
 	width: 255px;
 	height: 40px;
 	font-size: 13px;
@@ -74,8 +102,17 @@
 	color: rgba(78, 93, 120, 1);
 	line-height: 20px;
 }
-
-.time-btn {
+.coinwarning-btn {
+	width: 200px;
+	height: 20px;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 20px;
+	position: absolute;
+	top: 25px;
+	left: 0px;	
+}
+.cointime-btn {
 	width: 50px;
 	height: 16px;
 	font-size: 12px;
@@ -83,18 +120,6 @@
 	color: rgba(176, 183, 195, 1);
 	line-height: 16px;
 	position: absolute;
-	top: 40px;
+	top: 50px;
 	left: 0px;
-}
-
-.clearfloat:after {
-	display: block;
-	clear: both;
-	content: "";
-	visibility: hidden;
-	height: 0
-}
-
-.clearfloat {
-	zoom: 1
 }
