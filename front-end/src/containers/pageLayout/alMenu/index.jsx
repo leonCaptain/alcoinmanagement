@@ -9,7 +9,7 @@ const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
 
-export default class AlSider extends React.Component {
+export default class AlMenu extends React.Component {
 	constructor(props) {
 		super(props);
 	}

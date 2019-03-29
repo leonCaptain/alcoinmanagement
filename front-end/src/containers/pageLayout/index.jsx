@@ -5,7 +5,7 @@ import {
 import './index.css';
 import SearchSvg from '../../assets/search.svg';
 import BellSvg from '../../assets/bell.svg';
-import AlSider from './al-sider/index.jsx';
+import AlMenu from './al-sider/index.jsx';
 
 const { Header, Content, Sider } = Layout;
 
@@ -32,7 +32,7 @@ export default class PageLayout extends React.Component {
 				    </Header>
 				  <Layout>
 				    <Sider className="al-left-sider">
-				    	<AlSider> </AlSider>
+				    	<AlMenu> </AlMenu>
 				    </Sider>
 				  	<Content className="al-content">
 				  		content
