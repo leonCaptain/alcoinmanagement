@@ -1,25 +1,13 @@
 .al-layout .al-header {
-	width: 100%;
-	height: 5.27%; 
-	max-height: 54px;
-	background: rgba(255,255,255,1);
-	box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.08);
+	width:1440px;
+	height:56px;
+	background:rgba(255,255,255,1);
+	box-shadow:0px 1px 0px 0px rgba(224,224,224,1);
 }
 
 .al-layout  .al-left {
 	display: inline-block;
 }
-
-.al-layout  .al-left .al-logo-content{
-	width:168px;
-	height:36px;
-	font-size:26px;
-	font-family:AvenirNext-DemiBold;
-	font-weight:600;
-	color:rgba(2,132,254,1);
-	line-height:36px;
-}
-
 
 
 .al-layout .al-left-sider {
@@ -31,17 +19,18 @@
 	overflow: hidden;
 }
 
-.al-layout .al-content {
-	height: 100%;
-	width: 100%;
-}
 
 .al-layout .al-header .al-left .al-logo {
-	width:30px;
-	height:30px;
-	background:rgba(2,132,254,1);
-	border:3px solid rgba(2,132,254,1);
+	width: 200px;
+	height: 36px;
 	display: inline-block;
+	overflow: hidden;
+	margin: 10px 20px;
+}
+
+.al-layout .al-header .al-left .al-logo  svg{
+	width: 100%;
+	height: 100%;
 }
 
 
@@ -50,24 +39,23 @@
 }
 
 .al-layout .al-header .al-light .search {
-	height: 28.52%;
-	width: 1.11%;
+	height: 16px;
+	width: 16px;
 }
 
 .al-layout .al-header .al-light .bell {
-	height: 28.57%;
-	width: 1.11%;
-	margin-left: 20px;
+	height: 16px;
+	width: 15px;
+	margin: 19px 20px 20px 20px;
 }
 
 .al-layout .al-header .al-light .avatar {
 	height: 30px;
-	width: 30px;
-	margin: 13px auto;
+	width: 29px;
+	margin: 12px 0 12px;
 	line-height: 30px;
 	text-align: center;
 	font-size: 0;
-	margin-left: 20px;
 }
 
 .al-layout .al-header .al-light .avatar img {
@@ -83,7 +71,7 @@
 	font-weight:400;
 	color:rgba(78,93,120,1);
 	line-height:18px;
-	margin-right: 2.78%;
+	margin: 19px 40px 19px 10px;
 }
 
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Menu, Icon} from 'antd';
-import './index.css';
-import OverViewSvg from '../../../assets/overview.svg';
-import PortfolioSvg from '../../../assets/portfolio.svg';
-import pintselSvg from '../../../assets/pint_sel.svg';
+import OverViewSvg from '../../assets/overview.svg';
+import PortfolioSvg from '../../assets/portfolio.svg';
+import pintselSvg from '../../assets/pint_sel.svg';
+import "../../style/almenu.css";
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -22,12 +22,13 @@ export default class AlMenu extends React.Component {
 	        defaultSelectedKeys={['1']}
 	        defaultOpenKeys={['sub1']}
 	        mode="inline"
+	        className="alcoin-menu"
 	      >
-	        <Menu.Item key="sub1">
+	        <Menu.Item key="sub1" className="overview" style={{ paddingLeft:"0px;"}}>
             	<Icon component={OverViewSvg} />
             	<span>概览</span>
          	</Menu.Item>
-	        <SubMenu key="sub2" title={<span><Icon component={PortfolioSvg} /><span>投资组合</span></span>}>
+	        <SubMenu key="sub2" className="portfolio" title={<span><Icon component={PortfolioSvg} /><span>投资组合</span></span>}>
 	          <Menu.Item key="5">
 	          	<Icon component={pintselSvg} />
             	<span>投资详情</span>

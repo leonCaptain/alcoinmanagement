@@ -2,10 +2,12 @@ import React from 'react';
 import {
   Layout, Menu, Avatar, Icon,
 } from 'antd';
-import './index.css';
 import SearchSvg from '../../assets/search.svg';
 import BellSvg from '../../assets/bell.svg';
-import AlMenu from './al-sider/index.jsx';
+import AlMenu from '../../components/alMenu/index';
+import LogoSvg from '../../assets/alcoinanalysisz_logo.svg';
+import "../../style/pageLayout/index.css";
+
 
 const { Header, Content, Sider } = Layout;
 
@@ -13,15 +15,13 @@ export default class PageLayout extends React.Component {
 	constructor(props) {
 		super(props);
 	}
-
 	render() {
 		return(
 			<div className="al-layout">
 				<Layout>
-				    <Header className="al-header">
+				    <Header className="al-header" style={{ padding: "0"}}>
 						<div className="al-left">
-							<div className="al-logo"> </div>
-							<span className="al-logo-content"> Alcoinanalysis</span>
+							<Icon className="al-logo" component={LogoSvg} />
 						</div>
 						<div className="al-light">
 							<Icon className="search" component={SearchSvg} />
@@ -35,7 +35,11 @@ export default class PageLayout extends React.Component {
 				    	<AlMenu> </AlMenu>
 				    </Sider>
 				  	<Content className="al-content">
-				  		content
+				  	  	{
+                    		React.Children.map(this.props.children,function(child){
+                        		return <div>{child}</div>;
+                    		})
+                		}
 				  	</Content>
 				  </Layout>
 				</Layout>

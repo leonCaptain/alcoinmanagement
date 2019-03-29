@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Icon} from 'antd';
 import './index.css';
-import tsIcon from '../../assets/iconwartning.png';
+import tsIcon from '../../assets/icoinwarning.png';
 
 class Coinwarning extends Component {
 	constructor (props) {

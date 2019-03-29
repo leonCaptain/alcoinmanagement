@@ -1,0 +1,9 @@
+html {
+  height: 100%;
+  display: table;
+}
+ 
+body {
+  display: table-cell;
+  height: 100%;
+}

@@ -15,4 +15,8 @@ export default class User extends BaseEntity {
 
     @Column("int", { name: "age", nullable: true })
     age: number;
+    
+
+    @Column("varchar", { name: "avatar", nullable: true })
+    avatar: string;
 }

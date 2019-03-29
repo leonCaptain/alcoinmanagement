@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import PageLayout from './pageLayout/index';
-
+import PageLayout from '../components/pageLayout/index';
+import MonitorPanel from '../components/monitorPanel/index';
 
 class PortfolioController extends React.Component {
 	constructor(props) {
