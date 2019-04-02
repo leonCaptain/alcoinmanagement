@@ -66,8 +66,8 @@
 	height: 87px;
 	position: relative;
 }
-.coinwarningText .coinMoney {
-	width: 102px;
+.coinwarningText #coinMoney {
+	width: 105px;
 	height: 17px;
 	font-size: 13px;
 	font-weight: 400;

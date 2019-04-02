@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {Icon} from 'antd';
 import './index.css';
 import tsIcon from '../../assets/icoinwarning.png';
@@ -6,36 +7,25 @@ import tsIcon from '../../assets/icoinwarning.png';
 class Position extends Component {
 	constructor (props) {
 		super(props);
-		this.state = {
-			list: [{
-					id: 0,
-					text: '10%',
-					data:'一小时前',
-				},
-				{
-					id: 1,
-					text: '10%',
-					data:'一小时前',
-				},
-				{
-					id: 2,
-					text: '10%',
-					data:'一小时前',	
-				}
-			],
-			warningtext:'持仓提醒'
-		};
 	}
+	static propTypes={
+		projectwarninglist:PropTypes.shape({
+				list: PropTypes.array.isRequired,
+				positionwarningtext: PropTypes.string.isRequired,
+		}),
+	};
+	
 	render () {
+		
 		return (
 		    <div className = "positionwarning" >
 			<div className="positionTopwaring">
-			<p style={{float: 'left' }}>{this.state.warningtext}</p>
+			<p style={{float: 'left' }}>{this.props.positionwarninglist.positionwarningtext}</p>
 			<Icon type="ellipsis" style={{float: 'right',marginTop:'12px',marginRight:'16px' }}/>
 			</div>
 			<ul>
 			{
-				this.state.list.map((item, index) =>
+				this.props.positionwarninglist.list.map((item, index) =>
 					<li key={item.id}id={item.id} > 
 					<div className="positionwarningText" >
 					<p>

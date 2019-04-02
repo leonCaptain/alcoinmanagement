@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {Icon} from 'antd';
 import './index.css';
 import tsIcon from '../../assets/icoinwarning.png';
@@ -6,36 +7,27 @@ import tsIcon from '../../assets/icoinwarning.png';
 class Warning extends Component {
 	constructor (props) {
 		super(props);
-		this.state = {
-			list: [{
-					id: 0,
-					text: 'Evaluape评级 &#91Fetch.AI] :人工智能驱动的智能账本,评分:6.9',
-					data:'一小时前',
-				},
-				{
-					id: 1,
-					text: 'Evaluape评级 &#91Fetch.AI] :人工智能驱动的智能账本,评分:6.9',
-					data:'一小时前',
-				},
-				{
-					id: 2,
-					text: 'Evaluape评级 &#91Fetch.AI] :人工智能驱动的智能账本,评分:6.9',
-					data:'一小时前',	
-				}
-			],
-			warningtext:'已关注项目提醒'
-		};
 	}
+	
+	static propTypes={
+		projectwarninglist:PropTypes.shape({
+        list: PropTypes.array.isRequired,
+        warningtext: PropTypes.string.isRequired,
+    }),
+		
+	};
+	
+	
 	render () {
 		return (
 		    <div className = "warning" >
 			<div className="Topwaring">
-			<p style={{float: 'left' }}>{this.state.warningtext}</p>
+			<p style={{float: 'left' }}>{this.props.projectwarninglist.warningtext}</p>
 			<Icon type="ellipsis" style={{float: 'right',marginTop:'12px',marginRight:'16px' }}/>
 			</div>
 			<ul>
 			{
-				this.state.list.map((item, index) =>
+				this.props.projectwarninglist.list.map((item, index) =>
 					<li key={item.id}id={item.id} > 
 					<div
 					 className='icon-btn'src={`./assets/${item.icon}`}>
