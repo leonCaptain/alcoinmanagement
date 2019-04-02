@@ -1,0 +1,79 @@
+.al-monitor .panel {
+	width:250px;
+	height:120px;
+	background:rgba(255,255,255,1);
+	box-shadow:0px 2px 4px 0px rgba(0,0,0,0.08);
+	border-radius:2px;
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.al-monitor .today_profit {
+	margin-left: 0px;
+}
+.al-monitor {
+	margin: 40px;
+	width: 1200px;
+}
+
+.al-monitor .al-m-title {
+	width:100px;
+	height:16px;
+	font-size:12px;
+	font-family:PingFangSC-Regular;
+	font-weight:400;
+	color:rgba(138,148,166,1);
+	line-height:16px;
+	margin-top: 16px;
+	margin-left: 16px;
+	display: block;
+
+}
+
+.al-monitor .al-m-content {
+	height:32px;
+	font-size:28px;
+	font-family:DINOT-Medium;
+	font-weight:500;
+	color:rgba(78,93,120,1);
+	line-height:30px;	
+	margin-left: 16px;
+	margin-top: 4px;
+}
+
+.al-monitor .al-m-line-svg{
+	width:100%;
+    height:51px;
+	display: block;
+}
+
+.al-monitor .al-m-line-svg svg{
+	width:100%;
+    height:100%;
+}
+
+.al-monitor .al-m-line-dollar-svg {
+	width:119px;
+	height:120px;
+}
+
+.al-monitor .al-m-line-dollar-svg svg{
+	width:119px;
+	height:120px;
+}
+.al-monitor  .left {
+	float:left;
+}
+.al-monitor  .right {
+	float:right;
+}
+
+.al-monitor .al-m-line-btc-svg {
+	width:120px;
+	height:120px;
+}
+
+.al-monitor .al-m-line-btc-svg svg{
+	width:120px;
+	height:120px;
+}

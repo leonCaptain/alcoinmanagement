@@ -4,6 +4,10 @@ html {
 }
  
 body {
-  display: table-cell;
   height: 100%;
+  width: 1440px;
+}
+
+.clear-float {
+	clear:both;
 }

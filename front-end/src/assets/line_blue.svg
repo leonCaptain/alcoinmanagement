@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="250px" height="57px" viewBox="0 0 250 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>line_blue250*57</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="250" height="58" rx="2"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="97.5772218%" id="linearGradient-3">
+            <stop stop-color="#0284FE" stop-opacity="0.14100743" offset="0%"></stop>
+            <stop stop-color="#0284FE" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="line_blue250*57">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <g id="Group" mask="url(#mask-2)" stroke="#0284FE">
+                <g transform="translate(-8.000000, 3.000000)">
+                    <circle id="Oval" stroke-opacity="0.196268575" stroke-width="3" fill="#0284FE" fill-rule="evenodd" cx="221" cy="4" r="5.5"></circle>
+                    <path d="M0,55 L0,23.9565217 C19.4140182,25.4274243 24.5,41.5789474 38,41.5789474 C51.5,41.5789474 59.3650014,31.3478261 79.0597078,31.3478261 C98.7544142,31.3478261 105.610109,30.4316027 117.108308,21.1718156 C128.606506,11.9120285 134.592116,10.0479415 144.796058,12.3923918 C155,14.7368421 162.53712,25.4347826 180.758699,25.4347826 C198.980278,25.4347826 203.506198,7.8306997 222.110296,4.39759655 C234.513028,2.10886112 247.809596,9.70132909 262,27.1750005 L262,55" id="Path" stroke-width="1.5" fill="url(#linearGradient-3)" fill-rule="nonzero" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

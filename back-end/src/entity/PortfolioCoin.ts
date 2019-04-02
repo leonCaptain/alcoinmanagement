@@ -1,6 +1,8 @@
-import {Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToOne, JoinColumn} from "typeorm";
 import BaseEntity from './BaseEntity';
 import Portfolio from './Portfolio';
+import Coin from './CoinInfo';
+
 
 @Entity()
 export default class PortfolioCoin extends BaseEntity {
@@ -14,11 +16,8 @@ export default class PortfolioCoin extends BaseEntity {
     @JoinColumn()
     portfolio: Portfolio;
 
-    @Column("varchar", { length: 50})
-    coin: string;
-
-    @Column("varchar", { name: "coin_symbolic", length: "10" })
-    coinSymbolic: string;
+    @OneToOne(type => Coin, Coin => Coin.id, { onDelete: 'CASCADE' })
+    Coin: Coin;
 
     @Column("int")
     count: number;

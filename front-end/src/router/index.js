@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import Home from '../containers/homeContainer/index';
-import Portfolio from '../containers/portfolioController.jsx';
+import Portfolio from '../containers/portfolioContainer.jsx';
 
 let getRouter = () => (
   <Router>
