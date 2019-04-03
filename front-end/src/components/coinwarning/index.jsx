@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {Icon} from 'antd';
-import './index.css';
+import './style.scss';
 import tsIcon from '../../assets/icoinwarning.png';
 
 class Coinwarning extends Component {
@@ -18,7 +18,7 @@ class Coinwarning extends Component {
 	
 	render () {
 		return (
-		    <div className = "coinwarning" >
+		    <div className ="coinwarning">
 			<div className="coinTopwaring">
 			<p style={{float: 'left' }}>{this.props.coinwarninglist.warningtext}</p>
 			<Icon type="ellipsis" style={{float: 'right',marginTop:'12px',marginRight:'16px' }}/>

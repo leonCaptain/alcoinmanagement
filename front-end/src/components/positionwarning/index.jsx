@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {Icon} from 'antd';
-import './index.css';
+import './index.scss';
 import tsIcon from '../../assets/icoinwarning.png';
 
 class Position extends Component {

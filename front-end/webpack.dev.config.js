@@ -24,11 +24,10 @@ module.exports = {
     module: {
         rules: [
           {
-            test: /\.(le|c)ss$/,
+            test: /\.(sc|c)ss$/,
             use: [
               devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
               'css-loader',
-              'less-loader',
               'sass-loader',
             ]
           },{
@@ -96,6 +95,6 @@ module.exports = {
         port: '3333'
     },
   resolve: {
-     extensions: ['.js', '.jsx', '.less']
+     extensions: ['.js', '.jsx', '.scss']
   }
 }
