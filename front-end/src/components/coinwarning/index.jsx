@@ -1,57 +1,38 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {Icon} from 'antd';
-import './index.css';
+import './style.scss';
 import tsIcon from '../../assets/icoinwarning.png';
 
 class Coinwarning extends Component {
 	constructor (props) {
 		super(props);
-		this.state = {
-			list: [{
-					id: 0,
-					buywarning:'买入',
-					sellwarning:'',
-					data:'一小时前',
-					money:'$2300',
-					kvalue:'RSI超卖'
-				},
-				{
-					id: 1,
-					buywarning:'',
-					sellwarning:'卖出',
-					data:'一小时前',
-					money:'$2300',
-					kvalue:'RSI超卖'
-				},
-				{
-					id: 2,
-					buywarning:'买入',
-					sellwarning:'',
-					data:'一小时前',	
-					money:'$2300',
-					kvalue:'RSI超卖'
-				}
-			],
-			warningtext:'已关注币种价格提醒'
-		};
 	}
+	
+	static propTypes={
+		projectwarninglist:PropTypes.shape({
+				list: PropTypes.array.isRequired,
+				warningtext: PropTypes.string.isRequired,
+		}),
+	};
+	
 	render () {
 		return (
-		    <div className = "coinwarning" >
+		    <div className ="coinwarning">
 			<div className="coinTopwaring">
-			<p style={{float: 'left' }}>{this.state.warningtext}</p>
+			<p style={{float: 'left' }}>{this.props.coinwarninglist.warningtext}</p>
 			<Icon type="ellipsis" style={{float: 'right',marginTop:'12px',marginRight:'16px' }}/>
 			</div>
 			<ul>
 			{
-				this.state.list.map((item, index) =>
+				this.props.coinwarninglist.list.map((item, index) =>
 					<li key={item.id}id={item.id} > 
 					<div
 					 className='coin-icon-btn'src={`./assets/${item.icon}`}>
 					</div>
 					<div style={{float: 'right'}} className="coinwarningText" >
 					<p>
-						<span className="coinMoney">当前价格:&nbsp;&nbsp;{ item.money }</span>
+						<span id="coinMoney">当前价格:&nbsp;&nbsp;{item.money}</span>
 						<p className="circle"></p>
 						<span className="K-Line-Index">k线指标:&nbsp;&nbsp;{item.kvalue}</span>
 					</p>

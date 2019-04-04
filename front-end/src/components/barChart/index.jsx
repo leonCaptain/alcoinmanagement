@@ -11,7 +11,7 @@ export default class BarChart extends React.Component {
 		
 		const dv = new DataSet.View().source(this.props.barchartdata);
 		const data = dv.rows;
-		const padding=[ 16, 30, 20, 50];
+		const padding=[ 16, 30, 50, 50];
 		
 		dv.transform({
 		  type: 'sort',

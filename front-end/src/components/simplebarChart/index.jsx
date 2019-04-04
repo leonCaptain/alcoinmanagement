@@ -15,7 +15,7 @@ export default class SimplebarChart extends React.Component {
 	}
   render() {
 		
-		const padding=[ 16, 30, 20, 50];
+		const padding=[ 16, 30, 50, 50];
 		const color=this.props.color;
 		
     return (

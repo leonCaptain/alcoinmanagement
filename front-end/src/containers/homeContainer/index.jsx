@@ -50,9 +50,9 @@ class Counter extends Component {
 				</Sider>
 				<Layout className="home-Content">
 						<div className="content-Warning">
-								<Warning></Warning>
-								<CoinWarning></CoinWarning>
-								<PositionWarning></PositionWarning>
+								<Warning projectwarninglist={this.props.projectwarningdata}></Warning>
+								<CoinWarning coinwarninglist={this.props.coinwarningdata}></CoinWarning>
+								<PositionWarning positionwarninglist={this.props.positionwarningdata}></PositionWarning>
 						</div>,
 						<div className="content-Chart">
 							<div className="chart barchart">
@@ -67,14 +67,14 @@ class Counter extends Component {
 								<p style={{float: 'left' }}>涨幅榜前5(24h)</p>
 								<Icon type="ellipsis" style={{float: 'right',marginTop:'12px',marginRight:'16px'  }}/>
 								</div>
-								<SimplebarChart color={['coin',[ '#92FEFF','#29DEDF','#79EF99','#1AD74D','#15AD3F' ]]}></SimplebarChart>
+								<SimplebarChart color={['coin',[ '#15AD3F','#1AD74D','#79EF99','#29DEDF','#92FEFF' ]]}></SimplebarChart>
 							</div>
 							<div className="chart barchart">
 								<div className="chart-Header">
 								<p style={{float: 'left' }}>跌幅榜前5(24h)</p>
 								<Icon type="ellipsis" style={{float: 'right' ,marginTop:'12px',marginRight:'16px' }}/>
 								</div>
-								<SimplebarChart color={['coin',[ '#FFE172','#FFC554','#FFA1A1','#FF5D5D','#DD2727' ]]}></SimplebarChart>
+								<SimplebarChart color={['coin',[ '#DD2727','#FF5D5D','#FFA1A1','#FFC554','#FFE172' ]]}></SimplebarChart>
 							</div>
 						</div>,
 				</Layout>
@@ -90,9 +90,12 @@ const mapStateToProps = (state) => {
 			error: state.home.userData.error,
 			user: state.home.userData.user,
 		},
-        counter: state.home.counter,
+    counter: state.home.counter,
 		barchartdata:state.home.barchartdata,
-		noticeListData:state.home.noticeList
+		noticeListData:state.home.noticeList,
+		projectwarningdata:state.home.projectwarning,
+		positionwarningdata:state.home.positionwarning,
+		coinwarningdata:state.home.coinwarning
     }
 };
 const mapDispatchToProps = (dispatch) => {

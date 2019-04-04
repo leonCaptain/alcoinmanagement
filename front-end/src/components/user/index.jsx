@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Avatar } from 'antd';
-import './index.css';
+import './index.scss';
 
 class User extends Component {
 	constructor(props) {

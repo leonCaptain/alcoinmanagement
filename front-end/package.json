@@ -6,7 +6,7 @@
   "scripts": {
     "build:env": "webpack --config webpack.config.js",
     "build:dev": "webpack --config webpack.dev.config.js",
-    "dev": "webpack-dev-server --config webpack.dev.config.js --hot",
+    "dev": "webpack-dev-server --inline --config webpack.dev.config.js --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
