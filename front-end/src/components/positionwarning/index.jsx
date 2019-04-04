@@ -18,7 +18,7 @@ class Position extends Component {
 	render () {
 		
 		return (
-		    <div className = "positionwarning" >
+		    <div className="positionwarning" >
 			<div className="positionTopwaring">
 			<p style={{float: 'left' }}>{this.props.positionwarninglist.positionwarningtext}</p>
 			<Icon type="ellipsis" style={{float: 'right',marginTop:'12px',marginRight:'16px' }}/>
