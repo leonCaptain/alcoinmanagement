@@ -33,7 +33,7 @@ class Coinwarning extends Component {
 					<div style={{float: 'right'}} className="coinwarningText" >
 					<p>
 						<span id="coinMoney">当前价格:&nbsp;&nbsp;{item.money}</span>
-						<p className="circle"></p>
+						<span className="circle"></span>
 						<span className="K-Line-Index">k线指标:&nbsp;&nbsp;{item.kvalue}</span>
 					</p>
 					<span className="coinwarning-btn"
