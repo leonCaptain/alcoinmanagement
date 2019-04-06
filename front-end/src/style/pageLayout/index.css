@@ -55,14 +55,11 @@
 	margin: 12px 0 12px;
 	line-height: 30px;
 	text-align: center;
-	font-size: 0;
+	color:rgba(10,31,68,1);
 }
-
 .al-layout .al-header .al-light .avatar img {
 	vertical-align: middle;
 }
-
-
 .al-layout .al-header .al-light .userBox {
 	width:47px;
 	height:18px;
