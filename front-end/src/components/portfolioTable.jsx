@@ -131,12 +131,13 @@ export default class PortfolioTable extends React.Component {
  						title="添加投资记录"
  						onOk={this.handleOk}
  						onCancel={this.handleCancel}
+ 						style={{ "width": "440px", "height": "310px"}}
  						footer={[
  							<Button key="back" onClick={this.handleCancel} className="cancelBtn">
  								取消
  							</Button>,
  							<Button key="submit" type="primary" onClick={this.handleCancel} loading={loading} >
- 								提交
+ 								确认
  							</Button>
  						]}
  					>
