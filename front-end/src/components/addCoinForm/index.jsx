@@ -16,19 +16,22 @@ export default class PortfolioForm extends React.Component {
 	render() {
 		const { getFieldDecorator } = this.props.form;
 		const formItemLayout = {
-			labelCol: { span: 6 },
-			warpperCol: { span: 14}
+			labelCol: { span: 3 },
+			warpperCol: { span: 1}
 		};
 		return (
-			<Form  {...formItemLayout} onSubmit={this.handleSubmit}>
+			<Form    onSubmit={this.handleSubmit} style={{ "width": "440px", "height": "310px"}}>
 				<Form.Item
-					label="coin">
+					className="al-form-item"
+					labelAlign="left"
+					{...formItemLayout}
+					label="硬币">
 					{getFieldDecorator('select', {
 						rules: [
 							{ required: true, message: "请选择硬币"}
 						],
 					})(
-						<CoinSelect />
+						<CoinSelect  className="al-form-item-sel"/>
 					)}
 				</Form.Item>
 			</Form>

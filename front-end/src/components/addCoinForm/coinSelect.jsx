@@ -20,6 +20,9 @@ export default class CoinSelect extends React.Component {
 		fething: false,
 	}
 
+	handleChange = (value) => this.props.handleChange(value)
+	
+
 	fetchCoin = (value) => {
 		this.lastFetchId +=1;
 		const fetchId =  this.lastFetchId;
@@ -52,9 +55,10 @@ export default class CoinSelect extends React.Component {
 				notFoundContent={fetching ? <Spin size="small" /> : null}
 				filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
 				onSearch={this.fetchCoin}
-        		onChange={this.handleChange}
+        		className={this.props.className}
+        		style={{"width": "350px"}}
 				> 
-				{data.map(d=> <option key={d.id}>{d.symbolic}</option>)}
+				{data.map(d=> <Option key={d.id}>{d.symbolic}</Option>)}
 			</Select>
 		)
 	}
