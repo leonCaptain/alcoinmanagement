@@ -121,7 +121,6 @@ export default class PortfolioTable extends React.Component {
 
 	render() {
 		const {loading, visible } = this.state;
-		const { getFieldDecorator } = this.props.form;
 		return (
 			<div className="portfolio-table">
  				<div className="label" > 

@@ -92,7 +92,13 @@ module.exports = {
         inline: true,
         historyApiFallback: true,
         hot: true,
-        port: '3333'
+        port: '3333',
+        proxy: {
+          '/api': {
+            target: 'http://localhost:3000',
+            pathRewrite: {'^/api' : ''}
+          }
+        }
     },
   resolve: {
      extensions: ['.js', '.jsx', '.scss']
