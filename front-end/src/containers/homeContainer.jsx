@@ -12,7 +12,10 @@ import '../style/homeContainer.css';
 
 
 class HomeContainer extends Component {
-    render() {
+	constructor(props) {
+		super(props);
+	}
+    render(){
     return (
 			<div>
 				<PageLayout>

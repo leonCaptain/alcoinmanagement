@@ -1,8 +1,7 @@
 import React from 'react';
 import {
-  Layout, Menu, Avatar, Icon,
+  Layout, Menu, Avatar, Icon,Table, Button, Popconfirm,Form,Modal,Dropdown
 } from 'antd';
-import { Table, Button, Popconfirm, Form, Modal } from 'antd';
 import SearchSvg from '../../assets/search.svg';
 import BellSvg from '../../assets/bell.svg';
 import AlMenu from '../../components/alMenu/index';
@@ -12,8 +11,17 @@ import Register from '../register/index';
 import "../../style/pageLayout/index.css";
 import {Link} from 'react-router-dom';
 
-
 const { Header, Content, Sider } = Layout;
+const menu = (
+  <Menu>
+    <Menu.Item>
+	<Icon type="setting" />设置
+    </Menu.Item>
+    <Menu.Item>
+	<Icon type="logout" />登出
+    </Menu.Item>
+  </Menu>
+);
 
 export default class PageLayout extends React.Component {
 	constructor(props) {
@@ -51,7 +59,9 @@ export default class PageLayout extends React.Component {
 						<div className="al-light">
 							<Icon className="search" component={SearchSvg} />
 							<Icon className="bell" component={BellSvg} />
-							{false?<Avatar className="avatar" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+							{true?<Dropdown overlay={menu} placement="bottomCenter">
+							<Avatar className="avatar" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+							</Dropdown>
 							:<span className="avatar"onClick={this.showloginModel} >登录</span>}
 							<Modal
 								visible={this.state.visible}
@@ -68,7 +78,7 @@ export default class PageLayout extends React.Component {
 				    </Header>
 				  <Layout>
 				    <Sider className="al-left-sider">
-				    	<AlMenu> </AlMenu>
+				    	<AlMenu > </AlMenu>
 				    </Sider>
 				  	<Content className="al-content">
 				  	  	{

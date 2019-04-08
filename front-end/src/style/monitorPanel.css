@@ -6,8 +6,8 @@
 	border-radius:2px;
 	display: inline-block;
 	margin-left: 40px;
+	vertical-align:bottom;
 }
-
 .al-monitor .today_profit {
 	margin-left: 0px;
 }
@@ -15,7 +15,6 @@
 	margin: 40px;
 	width: 1200px;
 }
-
 .al-monitor .al-m-title {
 	width:100px;
 	height:16px;
@@ -29,7 +28,6 @@
 	display: block;
 
 }
-
 .al-monitor .al-m-content {
 	height:32px;
 	font-size:28px;
