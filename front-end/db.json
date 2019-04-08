@@ -1,0 +1,11 @@
+{
+	"coin":[{
+		"id": 0,
+		"name": "比特币",
+		"symbolic": "btc"	
+	},{
+		"id": 1,
+		"name": "以太坊",
+		"symbolic": "eth"
+	}]
+}

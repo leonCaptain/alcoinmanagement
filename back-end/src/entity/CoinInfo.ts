@@ -9,12 +9,12 @@ export default class Coin extends BaseEntity {
 	@PrimaryGeneratedColumn()
 	id: number;
 
-	//一个项目可能有多个加密货币 比如 neo 有neo加上gas
-	@ManyToOne(type => Project, project => project.id, {
-        onDelete:'CASCADE'
-    })
-    @JoinColumn()
-    project: Project;
+	// //一个项目可能有多个加密货币 比如 neo 有neo加上gas
+	// @ManyToOne(type => Project, project => project.id, {
+ //        onDelete:'CASCADE'
+ //    })
+ //    @JoinColumn()
+ //    project: Project;
 
     @Column("varchar", {nullable: true})
     name: string;

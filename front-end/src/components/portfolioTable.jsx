@@ -1,7 +1,12 @@
 import React  from 'react';
-import { Table, Button, Popconfirm, Form, Icon, Modal } from 'antd';
+import { Table, Button, Form, Popconfirm, Icon, Modal } from 'antd';
+import AddCoinFormDef from './addCoinForm';
+
 
 import '../style/portfolioTable.css';
+
+
+const AddPortfolioForm = Form.create({ name: 'add_coin_form'})(AddCoinFormDef);
 
 const columns = [{
 	title: '币种',
@@ -89,7 +94,10 @@ export default class PortfolioTable extends React.Component {
 				log: ""
 			}],
 			loading: false,
-			visible: false
+			visible: false,
+			coinlist:[{
+
+			}]
 		}
 	}
 
@@ -123,20 +131,17 @@ export default class PortfolioTable extends React.Component {
  						title="添加投资记录"
  						onOk={this.handleOk}
  						onCancel={this.handleCancel}
+ 						style={{ "width": "440px", "height": "310px"}}
  						footer={[
  							<Button key="back" onClick={this.handleCancel} className="cancelBtn">
  								取消
  							</Button>,
  							<Button key="submit" type="primary" onClick={this.handleCancel} loading={loading} >
- 								提交
+ 								确认
  							</Button>
  						]}
  					>
- 						<Form labelCol={{ span: 5 }} wrapperCol={{ span: 12 }} onSubmit={this.handleSubmit}>
- 							<Form.Item label="硬币"> 
- 								
- 							</Form.Item>
- 						</Form>
+ 						<AddPortfolioForm onSubmit={this.handleSubmit}/>
  					</Modal>
  				</div>
 				<Table columns={columns} dataSource={this.state.data} />
