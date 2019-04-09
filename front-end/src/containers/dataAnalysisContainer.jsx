@@ -11,10 +11,8 @@ class DataAnalysisContainer extends React.Component {
 	render() {
 		return(
 			<div>
-				<PageLayout>
 					<MonitorPanel />
 					<Brokenline/>
-				</PageLayout>
 			</div>	
 		)
 	}

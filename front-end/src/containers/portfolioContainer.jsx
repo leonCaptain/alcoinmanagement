@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import PageLayout from '../components/pageLayout/index';
 import MonitorPanel from '../components/monitorPanel/index';
 import PortfolioTable from '../components/portfolioTable.jsx';
 
@@ -11,10 +10,8 @@ class PortfolioController extends React.Component {
 	render() {
 		return(
 			<div>
-				<PageLayout>
 					<MonitorPanel />
 					<PortfolioTable />
-				</PageLayout>
 			</div>	
 		)
 	}

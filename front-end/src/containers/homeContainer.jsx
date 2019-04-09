@@ -18,7 +18,6 @@ class HomeContainer extends Component {
     render(){
     return (
 			<div>
-				<PageLayout>
 				<Layout className="home-Content">
 						<div className="content-Warning">
 								<Warning projectwarninglist={this.props.projectwarningdata}></Warning>
@@ -49,7 +48,6 @@ class HomeContainer extends Component {
 							</div>
 						</div>
 				</Layout>
-			</PageLayout>
 		</div>
         )
     }
