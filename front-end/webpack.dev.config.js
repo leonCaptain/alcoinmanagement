@@ -83,7 +83,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({template: './src/index.html'}),
         new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
       ],
     devtool: 'inline-source-map',
     devServer: {

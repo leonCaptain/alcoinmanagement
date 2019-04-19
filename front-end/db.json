@@ -7,5 +7,22 @@
 		"id": 1,
 		"name": "以太坊",
 		"symbolic": "eth"
+	}],
+	"coinwangning":[{
+		"id": 0,
+		"name": "比特币",
+		"symbolic": "btc"	
+	},{
+		"id": 1,
+		"name": "以太坊",
+		"symbolic": "eth"
+	}],
+	"user": [{
+				"id": "0001",
+				"name": "鲁文静",
+				"age": 22,
+				"sex": "女",
+				"icon": "userIcon.png"
 	}]
+	
 }

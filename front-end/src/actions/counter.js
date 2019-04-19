@@ -16,5 +16,7 @@ function reset() {
     payload: {}
   }
 }
-
+<Avatar className="avatar" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+							</Dropdown>
+							<Dropdown overlay={menu} placement="bottomCenter">
 export {increment, decrement, reset}
